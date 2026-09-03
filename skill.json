@@ -1,0 +1,39 @@
+{
+  "name": "genpark-topical-dialog-boundary-deflection-router-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - NeMo Guardrails style topical domain boundary enforcer and safety violation deflection router.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "governance",
+  "tags": [
+    "nemo-guardrails",
+    "dialog-rails",
+    "safety-deflection",
+    "boundary-enforcer",
+    "guardrails"
+  ],
+  "inputs": {
+    "user_query": {
+      "type": "string"
+    },
+    "allowed_domains": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "guardrail_decision_id": {
+      "type": "string"
+    },
+    "is_within_boundary": {
+      "type": "boolean"
+    },
+    "enforced_action": {
+      "type": "string"
+    },
+    "guardrail_audit_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
